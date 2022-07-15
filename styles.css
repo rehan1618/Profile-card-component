@@ -1,0 +1,102 @@
+:root {
+  --fontFamily: 'Kumbh Sans', sans-serif;
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--fontFamily);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background-color: var(--darkCyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: -27rem -51rem, 72rem 38rem;
+}
+
+.card {
+  display: flex;
+  width: 35rem;
+  height: 38rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  background-image: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  color: var(--veryDarkDesaturatedBlue);
+  z-index: 10;
+}
+
+.profile-img {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: 7rem;
+  overflow: hidden;
+}
+
+.profile-info-container {
+  text-align: center;
+}
+
+.name {
+  font-size: 1.8rem;
+  margin: 2rem auto 1rem;
+}
+
+.age {
+  font-weight: 400;
+  margin-left: 1rem;
+  color: var(--darkGrayishBlue);
+}
+
+.location {
+  font-size: 1.4rem;
+  color: var(--darkGrayishBlue);
+}
+
+.social-info-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2rem;
+}
+
+.stats-counts {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stats-heading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--darkGray);
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    background-position: -75rem -51rem, 10rem 38rem;
+  }
+}
